@@ -14,7 +14,8 @@ export const Root: React.FC = () => {
           <Route path="home" element={<Navigate to="/" replace={true} />} />
 
           <Route path="tabs">
-            <Route path=":tabId?" element={<TabsPage />} />
+            <Route index element={<TabsPage />} />
+            <Route path=":tabId" element={<TabsPage />} />
           </Route>
 
           <Route path="*" element={<NotFoundPage />} />
